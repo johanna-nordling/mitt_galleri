@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<title>Mitt Galleri</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #efeae8, #efeae8);
+  color: #333;
+}
+
+/* Navigation högst upp */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #3b3b3b;
+  padding: 6px 12px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background-color: #7f6b5c;
+  color: white;
+}
+
+/* Rubrik under navigation */
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 50px 0 40px 0;
+  color: #635448;
+  position: relative;         /* för pseudo-element */
+  display: inline-block;      /* strecket matchar textbredden */
+}
+
+/* Centrerat streck under rubrik */
+h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -20px;         /* avstånd under texten */
+  margin-top: 20px;
+  transform: translateX(-50%);
+  width: 700px;                /* längd på strecket */
+  height: 2px;                 /* tjocklek */
+  background-color: #c2b6ae;
+  border-radius: 1px;
+}
+
+/* Galleri med Flexbox */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto 90px auto;
+  margin-top: 100px;
+}
+
+.gallery img {
+  width: calc(50% - 10px);
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  box-sizing: border-box;
+  max-width: 400px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  color: #3b3b3b;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Hem</a>
+  <a href="om.html">Om</a>
+  <a href="galleri.html">Galleri</a>
+</nav>
+
+<!-- Rubrik med centrerat streck -->
+<h1>ILLUSTRATIONER</h1>
+
+<!-- Galleri -->
+<div class="gallery">
+  <img src="bild1.jpeg" alt="Bild 1">
+  <img src="bild13.jpeg" alt="Bild 13">
+  <img src="bild3.jpeg" alt="Bild 3">
+  <img src="bild7.jpeg" alt="Bild 7">
+  <img src="bild10.jpeg" alt="Bild 10">
+  <img src="bild6.jpeg" alt="Bild 6">
+  <img src="bild11.jpeg" alt="Bild 11">
+  <img src="bild8.jpeg" alt="Bild 8">
+  <img src="bild14.jpeg" alt="Bild 14">
+  <img src="bild2.jpeg" alt="Bild 2">
+  <img src="bild4.jpeg" alt="Bild 4">
+  <img src="bild12.jpeg" alt="Bild 12">
+  <img src="bild9.PNG" alt="Bild 9">
+  <img src="bild5.jpeg" alt="Bild 5">
+</div>
+
+<!-- Footer -->
+<footer>
+2026 Johanna Nordling
+</footer>
+
+</body>
+</html>
+

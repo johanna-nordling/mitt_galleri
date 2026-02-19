@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<title>Mitt Galleri</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #b5bcee, #ffffff); /* gradient hela bakgrunden */
+  color: #333;
+}
+
+/* Navigation högst upp */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #3b3b3b;
+  padding: 6px 12px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background-color: #5a5a5a;
+  color: white;
+}
+
+/* Rubrik */
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 170px 0 10px 0;
+  color: #5a5a5a;
+  position: relative;         /* för pseudo-element */
+}
+
+/* Textsektion */
+.main {
+  flex: 1;
+  max-width: 700px;       /* gör texten lagom bred */
+  text-align: center;     /* centrerar texten */
+  line-height: 1.8;       /* luftigare radavstånd */
+  font-size: 1.1rem;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 0 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 100px;
+  color: #3b3b3b;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation högst upp -->
+<nav>
+  <a href="index.html">Hem</a>
+  <a href="om.html">Om</a>
+  <a href="galleri.html">Galleri</a>
+</nav>
+
+<!-- Huvudrubrik -->
+<h1>PRESENTATION</h1>
+
+<div class="main">
+  <p>
+    På den här sidan har jag samlat ett urval av illustrationer och skisser 
+    jag skapat med hälp av appen och verktyget Procreate.
+    Verken visar en blandning av porträtt, förfrågningar om specifika 
+    illustrationer samt utifrån egna idéer och inspirationskällor.
+  </p>
+
+  <br>
+
+  <p>
+    För mig är tecknandet och kreativiteten ett sätt att uttrycka känslor och visioner 
+    visuellt. Skapandet är en lärande process som enligt mig aldrig blir riktigt 
+    fulländad, utan är i ständig utveckling.
+  </p>
+
+  <br>
+
+  <p>
+    Titta gärna in i galleriet!
+  </p>
+</div>
+
+<!-- Footer -->
+<footer>
+2026 Johanna Nordling
+</footer>
+
+</body>
+</html>
