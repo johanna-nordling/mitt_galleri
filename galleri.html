@@ -48,27 +48,39 @@ nav a:hover {
   color: white;
 }
 
+nav a:focus {
+  outline: 3px solid #000000;
+  outline-offset: 3px;
+  background-color: #ffe6cc;
+}
+
+nav a.active {
+  background-color: #a78d7a; /* samma som hover */
+  color: white;
+}
+
 /* Rubrik under navigation */
 h1 {
   text-align: center;
   font-weight: 700;
   font-size: 4rem;
   margin: 50px 0 40px 0;
+  margin-top:100px;
   color: #635448;
   position: relative;         /* för pseudo-element */
-  display: inline-block;      /* strecket matchar textbredden */
+  display: block;      /* strecket matchar textbredden */
 }
 
 /* Centrerat streck under rubrik */
+
 h1::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -20px;         /* avstånd under texten */
-  margin-top: 20px;
+  bottom: -20px;
   transform: translateX(-50%);
-  width: 700px;                /* längd på strecket */
-  height: 2px;                 /* tjocklek */
+  width: 700px;
+  height: 2px;
   background-color: #c2b6ae;
   border-radius: 1px;
 }
@@ -105,33 +117,36 @@ footer {
 
 <body>
 
-<!-- Navigation -->
-<nav>
-  <a href="index.html">Hem</a>
-  <a href="om.html">Om</a>
-  <a href="galleri.html">Galleri</a>
-</nav>
+<!-- Header med navigation -->
+<header>
+  <nav>
+    <a href="index.html">Hem</a>
+    <a href="om.html">Om</a>
+    <a href="galleri.html" class="active" aria-current="page">Galleri</a>
+  </nav>
+</header>
 
-<!-- Rubrik med centrerat streck -->
-<h1>ILLUSTRATIONER</h1>
+<!-- Huvudinnehåll -->
+<main aria-label="Huvudinnehåll: galleriet med illustrationer">
+  <h1>ILLUSTRATIONER</h1>
 
-<!-- Galleri -->
-<div class="gallery">
-  <img src="bild1.jpeg" alt="Bild 1">
-  <img src="bild13.jpeg" alt="Bild 13">
-  <img src="bild3.jpeg" alt="Bild 3">
-  <img src="bild7.jpeg" alt="Bild 7">
-  <img src="bild10.jpeg" alt="Bild 10">
-  <img src="bild6.jpeg" alt="Bild 6">
-  <img src="bild5.jpeg" alt="Bild 5">
-  <img src="bild8.jpeg" alt="Bild 8">
-  <img src="bild14.jpeg" alt="Bild 14">
-  <img src="bild2.jpeg" alt="Bild 2">
-  <img src="bild11.jpeg" alt="Bild 11">
-  <img src="bild12.jpeg" alt="Bild 12">
-  <img src="bild9.PNG" alt="Bild 9">
-  <img src="bild4.jpeg" alt="Bild 4">
-</div>
+  <div class="gallery">
+    <img src="bild1.jpeg" alt="Svartvitt porträtt av en kvinna och hennes barn som har sitt huvud vilandes på en gräsplätt">
+    <img src="bild13.jpeg" alt="Porträtt av artisten Park Jimin från gruppen BTS. Blått ljus, blåa toner, ett rödaktigt ljus format som ett plustecken går över hans ansikte">
+    <img src="bild3.jpeg" alt="Porträtt av dansaren Avemoves med skelettmasken som är hans signum">
+    <img src="bild7.jpeg" alt="Porträtt av Larry från Les Twins">
+    <img src="bild10.jpeg" alt="Skiss av en gränd där en hemlös herre går bärandes på påsar bredvid en kvinna som har det bättre ställt och bär på handväskor och shoppingpåsar">
+    <img src="bild6.jpeg" alt="Svartvitt porträtt av en kvinna som har en svart polotröja. Hennes örhängen är i roséguld">
+    <img src="bild5.jpeg" alt="Abstrakt illustration av elva vitt lysande vertikala stavar i olika längder. Med en rymdinspirerande bakgrund">
+    <img src="bild8.jpeg" alt="Illustration av ett äldre par sittandes på en bänk med ett träd bredvid, omringade av ljus och grönska. Överst på bilden är texten 'Livets sista tid'">
+    <img src="bild14.jpeg" alt="Abstrakt mörkare illustration av en kvinna ståendes framför svarta siluetter. Ett klot med glödande bakgrund svävar ovan dem">
+    <img src="bild2.jpeg" alt="Illustration av dansaren Salif Gueye och Michael Jackson ståendes på ett glasgolv som reflekterar deras siluetter. De befinner sig i en himmel omringandes av moln">
+    <img src="bild11.jpeg" alt="Illustration av rapparen Einar sittandes på ett trappsteg med blicken uppåt. En strålkastare lyser på honom ovanifrån">
+    <img src="bild12.jpeg" alt="Illustration av dansarna Les Twins, ena personen stående och pekar på den andra som gör ett stilrent hopp">
+    <img src="bild9.PNG" alt="Porträtt av Larry från Les Twins. Texten 'The rythm is keeping me alive' upprepas om igen tills den täckt hela bakgrunden bakom honom">
+    <img src="bild4.jpeg" alt="Illustration av en tjej som står i en grotta i blåa toner hållandes i en ljusrosa ballong. Solljus strömmar in från ovan i grottan och hon blickar uppåt">
+  </div>
+</main>
 
 <!-- Footer -->
 <footer>
@@ -140,4 +155,3 @@ footer {
 
 </body>
 </html>
-

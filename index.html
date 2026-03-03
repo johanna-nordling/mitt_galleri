@@ -13,7 +13,6 @@
   padding: 0;
 }
 
-
 body {
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
@@ -23,7 +22,6 @@ body {
   background: linear-gradient(to right, #f3dbf0, #f7d8c6); /* gradient bakgrunden */
   color: #333;
 }
-
 
 /* Navigation högst upp */
 nav {
@@ -50,6 +48,17 @@ nav a:hover {
   color: white;
 }
 
+nav a:focus {
+  outline: 3px solid #000000;
+  outline-offset: 3px;
+  background-color: #ffe6cc;
+}
+
+nav a.active {
+  background-color: #c57c93; /* samma som hover */
+  color: white;
+}
+
 /* Huvudbild centrerad */
 .main img {
   max-width: 50%;
@@ -71,18 +80,20 @@ footer {
 
 <body>
 
-<!-- Navigation högst upp -->
-<nav>
-  <a href="index.html">Hem</a>
-  <a href="om.html">Om</a>
-  <a href="galleri.html">Galleri</a>
-</nav>
+<!-- Header med navigation -->
+<header>
+  <nav>
+    <a href="index.html" class="active" aria-current="page">Hem</a>
+    <a href="om.html">Om</a>
+    <a href="galleri.html">Galleri</a>
+  </nav>
+</header>
 
-<!-- Två bilder mitt på sidan -->
-<div class="main">
-  <img src="welcome2.jpeg" alt="Welcome">
-  <img src="index.jpeg" alt="Huvudbild">
-</div>
+<!-- Huvudinnehåll med aria-label för skärmläsare -->
+<main class="main" aria-label="Huvudinnehåll: bilder från galleriet">
+  <img src="welcome2.jpeg" alt="Välkomstbild med texten 'Welcome' i dekorativ stil">
+  <img src="index.jpeg" alt="Huvudbild med en illustration av Procreate loggan, en iPad och Apple Pencil som skrivit 'Mitt galleri' i en sammanhängande linje">
+</main>
 
 <!-- Footer -->
 <footer>
